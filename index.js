@@ -6,7 +6,11 @@ const inquirer = require('inquirer');
 const questions = [
     'What is the name of the project?',
     'Please describe the project.',
+    'What are the steps required to install your project?',
+    'Provide instructions and examples for use.',
+    'List your collaborators, if any, with links to their GitHub profiles.',
     'Does this project have a license?',
+    'Does this have any test? If so write the test instructions',
     'Type in your Github username.',
     'What is your email address?',
 ];
@@ -15,28 +19,34 @@ const questions = [
 function writeToFile(fileName, data) {
     const READMEContent =
    `# ${data.project}
-    # Description
-    ${data.description}
-    # Table of Contents
-    - [Top of page](#top-of-page)
-    - [Description](#description)
-    - [License](#license)
-    - [Github](#github)
-    - [Email Address](#email-address)
+
+## Description
+${data.description}
+
+## Table of Contents
+- [Installation](#installation) // Fixed typo here
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Github](#github)
+- [Email Address](#email-address)
+
+## Installation
+    ${data.installation}
+
+## Usage
+    ${data.usage}
+
+## Credits
+    ${data.credits}
     
-    ## Top of page
-    ${data.project}
-    
-    ## Description
-    ${data.description}
-    
-    ## License
+## License
     ${data.license}
     
-    ## Github
+## Github
     ${data.github}
-    
-    ## Email Address
+
+## Email Address
     ${data.email}
     `;
 
@@ -68,16 +78,31 @@ function init() {
             {
                 type: 'input',
                 message: questions[2],
-                name: 'license',
+                name: 'installation',
             },
             {
                 type: 'input',
                 message: questions[3],
-                name: 'github',
+                name: 'usage',
             },
             {
                 type: 'input',
                 message: questions[4],
+                name: 'credits',
+            },
+            {
+                type: 'input',
+                message: questions[5],
+                name: 'license',
+            },
+            {
+                type: 'input',
+                message: questions[6],
+                name: 'github',
+            },
+            {
+                type: 'input',
+                message: questions[7],
                 name: 'email',
             },
         ]).then((response) => {
