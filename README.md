@@ -1,37 +1,35 @@
-# rounder
+# Readme Generator
+
 ## Description
-hopegully this works
+Find out who your friends are
+
 ## Table of Contents
-- [Top of page](#top-of-page)
-- [Description](#description)
 - [Installation](#installation) // Fixed typo here
 - [Usage](#usage)
 - [Credits](#credits)
+- [Tests](#test)
 - [License](#license)
 - [Github](#github)
 - [Email Address](#email-address)
 
- ## Top of page
-    rounder
-    
-## Description
-    hopegully this works
-
-## Installation // Fixed typo here
-    asd
+## Installation
+    none at all
 
 ## Usage
-    asdasd
+    screenshots are here
 
 ## Credits
-    asdasd
+    no collabds all me baby
+
+## Tests
+    no sir
     
 ## License
-    asd
+    no tests, easy stuff
     
 ## Github
-    asd
+    Rounderr21
 
 ## Email Address
-    asd
+    ugh.com
     
