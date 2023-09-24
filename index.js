@@ -5,12 +5,12 @@ const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
     'What is the name of the project?',
-    'Please describe the project.',
+    'Please write the description of the project.',
     'What are the steps required to install your project?',
     'Provide instructions and examples for use.',
     'List your collaborators, if any, with links to their GitHub profiles.',
     'Does this project have a license?',
-    'Does this have any test? If so write the test instructions',
+    'Does this have any test? If so write the test instructions.',
     'Type in your Github username.',
     'What is your email address?',
 ];
@@ -27,6 +27,7 @@ ${data.description}
 - [Installation](#installation) // Fixed typo here
 - [Usage](#usage)
 - [Credits](#credits)
+- [Tests](#test)
 - [License](#license)
 - [Github](#github)
 - [Email Address](#email-address)
@@ -39,6 +40,9 @@ ${data.description}
 
 ## Credits
     ${data.credits}
+
+## Tests
+    ${data.test}
     
 ## License
     ${data.license}
@@ -93,18 +97,24 @@ function init() {
             {
                 type: 'input',
                 message: questions[5],
-                name: 'license',
+                name: 'test',
             },
             {
                 type: 'input',
                 message: questions[6],
-                name: 'github',
+                name: 'license',
             },
             {
                 type: 'input',
                 message: questions[7],
+                name: 'github',
+            },
+            {
+                type: 'input',
+                message: questions[8],
                 name: 'email',
             },
+            
         ]).then((response) => {
             console.log(response);
             writeToFile('README.md', response);
