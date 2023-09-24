@@ -1,7 +1,7 @@
-# Readme File
+# Rounders
 
 ## Description
-You
+it is about gambling
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,22 +12,22 @@ You
 - [Questions](#quesetions)
 
 ## Installation
-    no steps required
+    just copy ssh from github account
 
 ## Usage
-    screenshot located here
+    screenshots can be located here
 
 ## Credits
     no collabs
 
 ## Tests
-    no sir
+    no tests required
     
 ## License
-    no tests
+    MIT License
 
 ## Questions
 If you have any issues please send me an email and I will get back to you as soon as I can.
 Email: ugh.com
-Github:  https://github.com/Rounderr21
+Github:  https://github.com/Rounderr21/Node.js_README_Generator
     
