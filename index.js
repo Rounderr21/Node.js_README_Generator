@@ -24,10 +24,10 @@ function writeToFile(fileName, data) {
 ${data.description}
 
 ## Table of Contents
-- [Installation](#installation) // Fixed typo here
+- [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Tests](#test)
+- [Tests](#tests)
 - [License](#license)
 - [Github](#github)
 - [Email Address](#email-address)
