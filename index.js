@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -93,14 +94,15 @@ function init() {
                 name: 'credits',
             },
             {
-                type: 'input',
+                type: 'list',
+                name: 'license',
                 message: questions[5],
-                name: 'test',
+                choices: ['MIT License', 'Unlicense', 'GNU General Public License', 'Apache License', 'Eclipse Public License', 'BSD3 License', 'Mozilla Public License'],
             },
             {
                 type: 'input',
                 message: questions[6],
-                name: 'license',
+                name: 'test',
             },
             {
                 type: 'input',
