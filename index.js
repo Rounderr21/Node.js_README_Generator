@@ -29,8 +29,7 @@ ${data.description}
 - [Credits](#credits)
 - [Tests](#tests)
 - [License](#license)
-- [Github](#github)
-- [Email Address](#email-address)
+- [Questions](#quesetions)
 
 ## Installation
     ${data.installation}
@@ -46,12 +45,11 @@ ${data.description}
     
 ## License
     ${data.license}
-    
-## Github
-    ${data.github}
 
-## Email Address
-    ${data.email}
+## Questions
+If you have any issues please send me an email and I will get back to you as soon as I can.
+Email: ${data.email}
+Github:  ${data.github}
     `;
 
     fs.writeFile(fileName, READMEContent, (error) => {
