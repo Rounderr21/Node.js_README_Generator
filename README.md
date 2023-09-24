@@ -1,35 +1,35 @@
-# Readme Generator
+# Readme generator
 
 ## Description
-Find out who your friends are
+neon moon
 
 ## Table of Contents
-- [Installation](#installation) // Fixed typo here
+- [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Tests](#test)
+- [Tests](#tests)
 - [License](#license)
 - [Github](#github)
 - [Email Address](#email-address)
 
 ## Installation
-    none at all
+    no install steps required
 
 ## Usage
-    screenshots are here
+    screenshot
 
 ## Credits
-    no collabds all me baby
+    no collabs needed
 
 ## Tests
-    no sir
+    no license
     
 ## License
-    no tests, easy stuff
+    no tests its easy stuff
     
 ## Github
     Rounderr21
 
 ## Email Address
-    ugh.com
+    ughhhhhh
     
