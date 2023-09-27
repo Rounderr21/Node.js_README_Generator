@@ -1,10 +1,9 @@
 
+// Function to render a license badge
 function renderLicenseBadge(license) {
   if (license) {
-
     const badges = {
       'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg',
-
     };
 
 
@@ -13,43 +12,43 @@ function renderLicenseBadge(license) {
     }
   }
 
-
+//returns nothing if left empty
   return '';
 }
 
-
+// Function to render a license link
 function renderLicenseLink(license) {
   if (license) {
-
     const licenseLinks = {
       'MIT': 'https://opensource.org/licenses/MIT',
-
     };
-
 
     if (licenseLinks[license]) {
       return `[License Information](${licenseLinks[license]})`;
     }
   }
+//returns nothing if left empty
+  return '';
+}
+
+// Function to render the license section of README
+function renderLicenseSection(license) {
+  if (license) {
+    return `
+## License
+
+This project is licensed under the [${license}](${renderLicenseLink(license)}) license.
+    `;
+  }
 
   return '';
 }
 
-
+// Function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return ` ${renderLicenseBadge(data.license)}
 
-${renderLicenseBadge(data.license)}
-
-## Table of Contents
-- [Description](#description)
-- [License](#license)
-
-## Description
-${data.description}
-
-## License
-${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
 `;
 }
 

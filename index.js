@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('../Node.js_README_Generator/utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -46,6 +46,7 @@ ${data.description}
     
 ## License
     ${data.license}
+    ${generateMarkdown(data)}
 
 ## Questions
 If you have any issues please send me an email and I will get back to you as soon as I can.
@@ -54,6 +55,9 @@ Github:  ${data.github}
     `;
 
     fs.writeFile(fileName, READMEContent, (error) => {
+        console.log(data.license);
+        console.log(data.title);
+        console.log(data.info);
         if (error) {
             console.log('Error has occurred!')
         } else {
