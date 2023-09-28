@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('../Node.js_README_Generator/utils/generateMarkdown');
+const renderLicenseBadge = require('../Node.js_README_Generator/utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -18,6 +19,10 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    const markdown = generateMarkdown(data);
+    const badge = renderLicenseBadge(data);
+    console.log(badge);
+
     const READMEContent =
    `# ${data.project}
 
@@ -33,39 +38,34 @@ ${data.description}
 - [Questions](#quesetions)
 
 ## Installation
-    ${data.installation}
+${data.installation}
 
 ## Usage
-    ${data.usage}
+${data.usage}
 
 ## Credits
-    ${data.credits}
+${data.credits}
 
 ## Tests
-    ${data.test}
+${data.test}
     
 ## License
-    ${data.license}
-    ${generateMarkdown(data)}
+The License that is being used for this readme file is the ${data.license}. ${markdown}
 
 ## Questions
 If you have any issues please send me an email and I will get back to you as soon as I can.
+Github: https://github.com/${data.github}
 Email: ${data.email}
-Github:  ${data.github}
     `;
 
     fs.writeFile(fileName, READMEContent, (error) => {
-        console.log(data.license);
-        console.log(data.title);
-        console.log(data.info);
-        if (error) {
-            console.log('Error has occurred!')
-        } else {
-            console.log('No errors detected.')
-        }
+      if (error) {
+        console.log('Error has occurred!');
+      } else {
+        console.log('No errors detected.');
+      }
     });
-};
-
+  }
 
 // TODO: Create a function to initialize app
 function init() {
@@ -120,7 +120,7 @@ function init() {
             },
             
         ]).then((response) => {
-            console.log(response);
+            //console.log(response);
             writeToFile('README.md', response);
         });
 };

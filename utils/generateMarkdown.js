@@ -1,18 +1,17 @@
-
 // Function to render a license badge
 function renderLicenseBadge(license) {
   if (license) {
     const badges = {
-      'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg',
+      'MIT License': 'https://img.shields.io/badge/License-MIT-yellow.svg',
+
     };
 
-
     if (badges[license]) {
-      return `![License](${badges[license]})`;
+      return `The License badge is: (${badges[license]})`;
     }
   }
 
-//returns nothing if left empty
+  // Returns nothing if left empty
   return '';
 }
 
@@ -20,14 +19,16 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license) {
     const licenseLinks = {
-      'MIT': 'https://opensource.org/licenses/MIT',
+      'MIT License': 'https://opensource.org/licenses/MIT',
+
     };
 
     if (licenseLinks[license]) {
-      return `[License Information](${licenseLinks[license]})`;
+      return `The license link is: (${licenseLinks[license]})`;
     }
   }
-//returns nothing if left empty
+
+  // Returns nothing if left empty
   return '';
 }
 
@@ -35,9 +36,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license) {
     return `
-## License
-
-This project is licensed under the [${license}](${renderLicenseLink(license)}) license.
+${renderLicenseLink(license)}
     `;
   }
 
@@ -46,10 +45,8 @@ This project is licensed under the [${license}](${renderLicenseLink(license)}) l
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  return ` ${renderLicenseBadge(data.license)}
-
-${renderLicenseSection(data.license)}
-`;
+  return `${renderLicenseSection(data.license)}
+  ${renderLicenseBadge(data.license)}`;
 }
 
 module.exports = generateMarkdown;
