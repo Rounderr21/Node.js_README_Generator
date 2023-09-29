@@ -24,7 +24,7 @@ function writeToFile(fileName, data) {
     console.log(badge);
 
     const READMEContent =
-   `# ${data.project}
+   `# ${data.project} ${badge}
 
 ## Description
 ${data.description}
