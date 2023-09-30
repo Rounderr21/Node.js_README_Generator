@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
     };
 
     if (badges[license]) {
-      return `[Badge]${badges[license]}`;
+      return `${badges[license]}`;
     }
   }
 
