@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('../Node.js_README_Generator/utils/generateMarkdown');
-const renderLicenseBadge = require('../Node.js_README_Generator/utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -19,12 +18,11 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const markdown = generateMarkdown(data);
-    const badge = renderLicenseBadge(data);
-    console.log(badge);
+    const { markdownSection, badgeImage } = generateMarkdown(data);
 
     const READMEContent =
-   `# ${data.project} ${badge}
+   `# ${data.project} 
+   ${badgeImage}
 
 ## Description
 ${data.description}
@@ -50,7 +48,7 @@ ${data.credits}
 ${data.test}
     
 ## License
-The License that is being used for this readme file is the ${data.license}. ${markdown}
+The License that is being used for this readme file is the ${data.license}${markdownSection}
 
 ## Questions
 If you have any issues please send me an email and I will get back to you as soon as I can.
