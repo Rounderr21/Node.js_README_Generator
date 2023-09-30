@@ -21,8 +21,7 @@ function writeToFile(fileName, data) {
     const { markdownSection, badgeImage } = generateMarkdown(data);
 
     const READMEContent =
-   `# ${data.project} 
-   ${badgeImage}
+   `# ${data.project}                                           ${badgeImage}
 
 ## Description
 ${data.description}
