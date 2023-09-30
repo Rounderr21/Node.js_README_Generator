@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
     };
 
     if (badges[license]) {
-      return `The License badge is: ${badges[license]}`;
+      return `[Badge]${badges[license]}`;
     }
   }
 
@@ -24,7 +24,7 @@ function renderLicenseLink(license) {
     };
 
     if (licenseLinks[license]) {
-      return `The license link is: ${licenseLinks[license]}`;
+      return `Documentation on the current license being used is located here: ${licenseLinks[license]}`;
     }
   }
 
@@ -45,8 +45,11 @@ ${renderLicenseLink(license)}
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  const badgeImg = renderLicenseBadge(data.license)
-  return `${renderLicenseSection(data.license)}`;
+  const markdownSection = renderLicenseSection(data.license);
+  const badge = renderLicenseBadge(data.license);
+  const badgeImage = `<img src="${badge}" alt="License Badge" />`;
+
+  return { markdownSection, badgeImage };
 }
 
 module.exports = generateMarkdown;
