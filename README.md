@@ -1,7 +1,7 @@
-# Rounders [Badge]https://img.shields.io/badge/License-MIT-yellow.svg
+# Rounders <img src="[Badge]https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge" />
 
 ## Description
-About Gambling
+About gambling and winning against the grind
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,20 +12,20 @@ About Gambling
 - [Questions](#quesetions)
 
 ## Installation
-no installs required
+install node.js is required
 
 ## Usage
-no instructions needed
+no special instructions needed.
 
 ## Credits
-no collabs, did it by myself
+No collabs
 
 ## Tests
-no tests are required
+Tests are not required
     
 ## License
 The License that is being used for this readme file is the MIT License
-[License Link]https://opensource.org/licenses/MIT
+Documentation on the current license being used is located here: https://opensource.org/licenses/MIT
     
 
 ## Questions
