@@ -1,4 +1,5 @@
-# Rounders                                           <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge" />
+# Rounders
+   <img src="https://img.shields.io/badge/License-EPL_1.0-red.svg" alt="License Badge" />
 
 ## Description
 
@@ -24,8 +25,8 @@
 
     
 ## License
-The License that is being used for this readme file is the MIT License
-Documentation on the current license being used is located here: https://opensource.org/licenses/MIT
+The License that is being used for this readme file is the Eclipse Public License.
+Documentation on the current license being used is located here: https://opensource.org/licenses/EPL-1.0
     
 
 ## Questions

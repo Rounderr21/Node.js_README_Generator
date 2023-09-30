@@ -21,7 +21,8 @@ function writeToFile(fileName, data) {
     const { markdownSection, badgeImage } = generateMarkdown(data);
 
     const READMEContent =
-   `# ${data.project}                                           ${badgeImage}
+   `# ${data.project}
+   ${badgeImage}
 
 ## Description
 ${data.description}
@@ -47,7 +48,7 @@ ${data.credits}
 ${data.test}
     
 ## License
-The License that is being used for this readme file is the ${data.license}${markdownSection}
+The License that is being used for this readme file is the ${data.license}.${markdownSection}
 
 ## Questions
 If you have any issues please send me an email and I will get back to you as soon as I can.
